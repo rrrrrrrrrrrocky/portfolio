@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-size-xs: 0.7rem;
+    --font-size-sm: 0.8rem;
+    --font-size-md: 0.9rem;
+    --font-size-lg: 1rem;
+    --font-size-xl: 1.1rem;
+    --font-size-2xl: 1.3rem;
+    --font-size-3xl: 1.5rem;
+    --font-size-4xl: 1.8rem;
+    --font-size-5xl: 2rem;
+    --font-size-6xl: 2.4rem;
+    --font-size-7xl: 2.8rem;
+    --font-size-8xl: 3rem;
+    --font-size-9xl: 4rem;
+
+    /* 기본 색상 (Light Mode) */
+    --black: 0 0% 0%;
+    --dark-gray: 0 0% 25%;
+    --gray: 0 0% 50%;
+    --light-gray: 0 0% 90%;
+    --white: 0 0% 100%;
+    --chip-red: 0 100% 69%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 18.6%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 18.6%;
+
+    /* --primary: 33 40% 60%; */
+    /* --primary-foreground: 24 24% 28.6%; */
+
+    --primary: 33 27.3% 74.9%;
+    --primary-foreground: 33 27.3% 25.1%;
+
+    --secondary: 33 11.1% 71.8%;
+    --secondary-foreground: 33 11.1% 28.2%;
+
+    --muted: 33 15.8% 89.2%;
+    --muted-foreground: 24 13.9% 47.1%;
+
+    --accent: 33 40% 60%;
+    --accent-foreground: 24 24% 91.4%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 33 11.8% 88.2%;
+    --input: 33 11.8% 88.2%;
+
+    /* 33 26.4% 95.2%; #F6F2F0 */
+    --background-default: 33 26.4% 95.2%;
+    /* --background-default: var(--white); */
+    --background-dialog: var(--white);
+    --background-primary: var(--primary);
+    --background-foreground: var(--black);
+    --foreground: 0 0% 18.6%;
+
+    --ring: var(--primary);
+
+    --radius: 0.5rem;
+
+    --chart-1: 18 35.3% 50.6%;
+    --chart-2: 95 21.2% 49.6%;
+    --chart-3: 42 23.1% 38.4%;
+    --chart-4: 38 34.3% 64.7%;
+    --chart-5: 33 26.4% 80.2%;
+  }
+
+  .dark {
+    /* Dark Mode – Light 모드의 색상에서 Lightness(명도)만 반전하거나 적절히 조정 */
+    --black: 0 0% 0%;
+    --dark-gray: 0 0% 75%; /* Light: 25% → Dark: 75% */
+    --gray: 0 0% 50%; /* 그대로 유지 */
+    --light-gray: 0 0% 10%; /* Light: 90% → Dark: 10% */
+    --white: 0 0% 100%;
+    --chip-red: 0 100% 69%;
+
+    --card: 0 0% 18.6%; /* Light card(white) → Dark card */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 18.6%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary 색상 – hue와 saturation은 유지하고, 명도를 Light 모드와 반대로 사용 */
+    --primary: 33 27.3% 74.9%;
+    --primary-foreground: 33 27.3% 25.1%;
+    /* Primary 색상 – hue와 saturation은 유지하고, 명도를 Light 모드와 반대로 사용 */
+    /* --primary: 33 40% 60%; 
+    --primary-foreground: 24 24% 91.4%; */
+
+    /* Secondary 색상 */
+    --secondary: 33 11.1% 28.2%; /* 100 - 71.8 = 28.2% */
+    --secondary-foreground: 33 11.1% 71.8%;
+
+    /* Muted 색상 – 단순 반전이 너무 극단적일 수 있으므로 약간 조정 */
+    --muted: 33 15.8% 20%; /* (Light: 89.2% → Dark: 약 20%로 설정) */
+    --muted-foreground: 24 13.9% 80%; /* (약간 밝게) */
+
+    /* Accent 색상 – 강조색은 보통 동일 계열을 유지 */
+    --accent: 33 40% 60%;
+    --accent-foreground: 24 24% 91.4%;
+
+    /* Destructive 색상 */
+    --destructive: 0 100% 50%; /* Light: 46.5% → Dark: 53.5% (반전) */
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border 및 Input – 일반적으로 다크 테마에서는 어두운 색으로 */
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+
+    --background-default: var(--black);
+    --background-dialog: var(--black);
+    --background-primary: var(--primary);
+    --background-foreground: var(--white);
+    --foreground: 0 0% 98%; /* Light: 18.6% → Dark: 98% */
+
+    --ring: var(--primary);
+
+    /* Chart 색상 – 필요에 따라 반전하거나, 그대로 유지할 수도 있습니다 */
+    --chart-1: 18 35.3% 49.4%;
+    --chart-2: 95 21.2% 50.4%;
+    --chart-3: 42 23.1% 61.6%;
+    --chart-4: 38 34.3% 35.3%;
+    --chart-5: 33 26.4% 19.8%;
+  }
+
+  /* TODO: tailwind.config.ts 에서 plugin에 추가해야함 */
+  .gnb-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .content-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+}
+
+* {
+  @apply ring-offset-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-transparent;
+}
