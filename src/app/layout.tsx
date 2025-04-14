@@ -10,6 +10,7 @@ import { ReactNode } from "react";
 import ClientProvider from "@/component/_common/client-provider";
 import FooterContainer from "@/component/_common/footer/_footer-container";
 import HeaderContainer from "@/component/_common/header/_header-container";
+import { Container } from "@/component/ui/container";
 import {
   AUTHOR,
   COMPANY_NAME,
@@ -139,9 +140,10 @@ const RootLayout = async ({
           <HeaderContainer />
           {/* TODO: 임시저장 기능 만든 후 추가 예정 */}
           {/* <AlertSection /> */}
+
           {children}
 
-          <FooterContainer />
+          {/* <FooterContainer /> */}
         </ClientProvider>
       </body>
     </html>

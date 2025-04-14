@@ -8,7 +8,7 @@ const LogoSection = () => {
     <Button data-gtm-id="logo:go-to-home" variant="none-style" asChild>
       <Link
         aria-label="go to home"
-        className="relative flex h-5 min-w-[92px] cursor-pointer items-center justify-start gap-x-1"
+        className="relative flex size-6 cursor-pointer items-center justify-start gap-x-1"
         href="/">
         <Logo />
       </Link>

@@ -36,8 +36,9 @@ const ButtonSection = () => {
   const { setTheme, resolvedTheme, theme } = useTheme();
 
   return (
+    // TODO: 메인 페이지 제외 버튼 노출되도록 구성 필요
     <Box className="flex items-center gap-x-4">
-      {MENUS.map((menu) => {
+      {/* {MENUS.map((menu) => {
         if (menu.child.length === 0) {
           return (
             <Button
@@ -80,7 +81,7 @@ const ButtonSection = () => {
             </DropdownMenu>
           );
         }
-      })}
+      })} */}
       <Select defaultValue={theme || "system"} onValueChange={setTheme}>
         <SelectTrigger
           className="w-fit border-transparent bg-transparent"

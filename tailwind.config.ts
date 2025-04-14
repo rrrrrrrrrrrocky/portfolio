@@ -146,6 +146,26 @@ export default {
         "8xl": "var(--font-size-8xl)",
         "9xl": "var(--font-size-9xl)",
       },
+      animation: {
+        blink: "blink 1s step-end infinite",
+        "slide-in": "slide-in 0.5s ease-out forwards",
+      },
+      keyframes: {
+        blink: {
+          "0%, 100%": { opacity: "0" },
+          "50%": { opacity: "1" },
+        },
+        "slide-in": {
+          from: {
+            transform: "translateX(-100%)",
+            opacity: "0",
+          },
+          to: {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+      },
     },
   },
   plugins: [
